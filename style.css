@@ -1,0 +1,47 @@
+h5{
+	display:inline-block;
+}
+body{
+	background-color:#1f1f23;
+	color:#fdfdfd;
+}
+.winning{
+	color:#00ff3b;
+	text-decoration: underline
+}
+
+#outter{
+	/*display:flex;*/
+	display: table;
+    width: 100%;
+    table-layout: fixed; 
+}
+
+#nameForm{
+	text-align:center;
+	font-family: 'Hind', sans-serif;
+	vertical-align: middle;
+}
+
+#player0,#player1,#player2,#player3{
+	font-family: 'Hind', sans-serif;
+/*	flex-grow:1;
+	height: 100%;*/
+	display: table-cell;
+	text-align:center;
+
+}
+
+input{
+	width:150px;
+}
+
+ul{
+	list-style:none;
+	padding:0;
+}
+
+li{
+	margin:8px 0px 8px 0px;
+	font-size:30px;
+}
