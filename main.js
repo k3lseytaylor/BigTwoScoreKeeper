@@ -89,6 +89,7 @@ function inputmover(numba = flag){
 
 function inputremover(){
 	let score = document.getElementById(`scoreInput${flag}`).value.trim();
+	const tempnum = parseInt(score);
 
 	if(score === ''){
 		score = 'win';
@@ -110,7 +111,13 @@ function inputremover(){
 		$( `#scoreInput${flag}` ).remove();
 		return;
 	}
-	var tempnum = parseInt(score);
+
+	if(Number.isInteger(tempnum)===false){
+		let newFlag = flag - 1 ;
+		$( `#scoreInput${flag}` ).remove();
+		return
+	}
+	
 	if(score === '8' || score === '9'){
 		score = tempnum * 2;
 	}
@@ -177,6 +184,15 @@ function endGame(){
 	flag += 1;
 	endGame();
 }
+
+
+// Todo
+//Clean Code 
+//Clean logic for if Statement (Check for text input)
+//Styling
+//Add functionalty to edit prev rounds
+//Have check for PlayerName if non give Name Player *
+
 
 
 
